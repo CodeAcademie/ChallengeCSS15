@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ChallengeCSS015</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/animate.css">
+</head>
+
+<body>
+    <div id="container">
+       <!--class="animated bounceOut"-->
+        <h1>projet css15 / Intégration</h1>
+        
+        <h2>I. Objectifs</h2>
+        <p>Le principe est le suivant : je vous fourni un dossier avec les images, ainsi que la maquette complète, à vous de coder cette page (l'index) pour qu'elle soit la plus fidèle possible à la maquette. Pour les plus férus, vous pouvez gérer le responsive.</p>
+        
+        <h2>II. Le Design</h2>
+        <p>Et oui, avant de commencer à foncer, voyons ce qu'il va falloir coder ! Il s'agit tout simplement d'un template "Bootstrap".</p>
+        <div>
+            <img src="img/maquette.png" alt="maquette à intégrer">
+        </div>
+        <button>
+            <a href="http://blacktie.co/demo/spot/" target="_blank">Démo du site</a>
+        </button>
+
+        <h2>III. Les contraintes</h2>
+        <p>Pour cet atelier, essayez de respecter les contraintes suivantes, cela pimentera le tout et vous permettra de découvrir de nombreuses astuces </p>
+        <ul>
+            <li>Gérer tous les survols du design.</li>
+            <li>Le désign doit conserver sa strucutre sur au moins firefox et chrome.</li>
+            <li>Les images ne doivent pas être déformées !</li>
+            <li>Bien entendu, le webdesigner attend un respect maximal des dimensions.</li>
+            <li>Il est à réaliser en Sass, Bootstrap n'est pas autorisé, juste du css.</li>
+        </ul>
+        
+        <h2>IV. Le défi</h2>
+        <img src="img/grumpy2.jpg" id="grumpy" alt="">
+        <p>Un respect et une intégration idéale du design un temps de travail optimal. Pour cela, une méthode agile en mini sprint peut vous être utile. Penser à vous renseignez-vous sur les différentes propriétés CSS3. Pensez à respecter les bonnes pratiques en CSS.</p>
+        
+        <h2 id="demo">V. Si tu en as marre, click un coup !</h2>
+        <button onclick="ragequit()">Ça m'soule !</button>
+    </div>
+        <h3 id="title-RageQuit">Rage quit</h3>
+</body>
+
+
+<script>
+function ragequit() {
+    var rage = document.getElementById("container").children;
+    var i;
+    for (i = 0; i < rage.length; i++) {
+        rage[i].className = "animation-rageQuit"
+    }
+    document.getElementById("container").className = "animation-rageQuit";
+    document.getElementById("title-RageQuit").className = "title-rage";
+}
+</script>
+</html>
